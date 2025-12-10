@@ -1,4 +1,14 @@
 @use './_reset';
 @use './_mixin' as *;
 @use './_common' as c;
+@use './_top/_top';
+@use './_top/_schedule';
+@use './_modules/_spanchor';
+@use './_modules/_pcanchor';
+@use './_modules/_animation';
+@use './_modules/_about';
+@use './_modules/_info';
+@use './_modules/_footer';
+@use './_modules/_pc';
+@use './_section/_part';
 

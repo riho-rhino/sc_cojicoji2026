@@ -2,150 +2,89 @@
 @use '../_mixin' as *;
 @use '../_common' as c;
 
-
-
-.about{
-    margin-top: spCalc(80);
-    .sec_ttl{
-        border-bottom: none;
-    }
-    .about_wrap{
-        width:spCalc(335);
-        background: #fff;
-        margin: 10px auto 0;
-        border: solid 1px c.$main;
-        border-radius: 30px;
-    }
-    .about_txt{
-        width: info(275);
-        margin: info(20) auto 0;
-        font-size: spFont(12);
-        line-height: 1.9;
-    }
-    @include pc{
-        .about_txt{
-            font-size: pcFont(14);
-        }
-    }
-}
-.about_btn{
-    width: info(210);
-    margin: info(30) auto info(50);
-    background: #835F3C;
-    border-radius: 30px;
+.allitems{
+    width: spCalc(500);
+    margin: spCalc(100) auto spCalc(83);
+    background: c.$main;
+    border: solid 1px #000;
+    border-radius: 35px;
     a{
-        color: #fff;
-        padding: calc(10 / 210) * 100%;
         width: 100%;
-        display: flex;
-        vertical-align: middle;
-        justify-content: center;
-        align-items: center;
+        padding: calc(39 / 500) * 100% 0;
         text-align: center;
-        gap: 10px;
-        p{
-            font-size: spFont(13);
-        }
-        span{
-            display: block;
-            width: 6.5px;
+        display: block;
+        position: relative;
+        color: #fff;
+        .arrow{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 4px;
+            margin-right: calc(79 / 500) * 100%;
             line-height: 0;
         }
     }
-    @include pc{
-        a{
-            p{
-                font-size: min(pcFont(15),17px);
-            }
-            span{
-                width: 7.8px;
-            }
-        }
-    }
-}
-
-.about_underline{
-    width: info(275);
-    margin: 0 auto;
-    height: 1px;
-    border-top: dotted 2px c.$main;
 }
 
 
-.gundan_wrap{
-    .gundan{
-        width: info(265);
-        margin: info(50) auto 0;
-        line-height: 0;
+.about_wrap{
+    width: spCalc(650);   
+    margin: 0 auto spCalc(30);
+    background: #fff;
+    border-radius: 15px;
+    padding: spCalc(83) 0 spCalc(76);
     
+
+    .coji-about_ttl{
+        width: calc(405.19 / 650) * 100%;
+        margin: 0 auto;
+        line-height: 0;
+    }
+    .about_cojicoji{
+        line-height: 1;
+        font-size: spFont(30);
+        text-align: center;
     }
 
-}
-
-.picturebook_wrap{
- .appearance{
-    width: info(122);
-    margin: info(50) auto 0;
-    line-height: 0;
- }
- .picturebook{
-    width: info(230);
-    margin: info(20) auto 0;
- }   
-}
-
-.author_wrap{
-    .author{
-        width: info(200);
-        margin: info(50) auto 0;
-    }
-    .author_name{
-        width: info(102);
-        margin: info(20) auto 0;
-    }
     .about_txt{
-        margin-bottom: info(50);
+        font-size: spFont(29);
+        line-height: 1.8;
+        width: calc(531.23 / 650) * 100%;
+        margin: calc(29 / 650) * 100% auto 0;
     }
-
-}
-
-.magazin_wrap{
-    .magazin{
-        width: info(172);
-        margin: info(50) auto 0;
-    }
-    .about_txt{
-        word-break: break-all;
-    }
-}
-
-.musubie_wrap{
-    margin-bottom: info(50);
-    .musubie{
-        width: info(230);
-        margin: info(50) auto 0;
-    }   
-}
-
-.about_collaboration{
-    position: relative;
-    width: spCalc(222);
-    margin: spCalc(60) auto;
-    padding-bottom: spCalc(38);
-    a{
-        position: relative;
-        z-index: 10;
-    }
-    .cat{
-        width: calc(63/222) * 100%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 5;
-        overflow: hidden;
-        img{
-            transform: translateY(-150px);
+    @include pc{
+        .about_cojicoji{
+            font-size: pcFont(40);
         }
+
+        .about_txt{
+            font-size: pcFont(38.67);
+        }
+    }
+}
+
+.coji_inner{
+    position: relative;
+    .about_ill1{
+        width: calc(575.57 / 650) * 100%;
+        margin-left: calc(50 / 650) * 100%;
+        padding-top: calc(165 / 650) * 100%;
+    }
+    .about_ill2{
+        position: absolute;
+        width: calc(141 / 650) * 100%;
+        top: 0;
+        left: 0;
+    }
+    .about_ill3{
+        position: absolute;
+        width: calc(85 / 650) * 100%;
+        top: 0;
+        right: 0;
+        margin: 0{
+            top: calc(150 / 650) * 100%;
+            right: calc(90 / 650) * 100%;
+        };
     }
 }

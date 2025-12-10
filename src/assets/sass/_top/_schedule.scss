@@ -1,0 +1,125 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+$date: 680;
+
+.schedule{
+    background: spCalc(680);
+    margin: spCalc(160) auto 0;
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    width: spCalc(680);
+    padding-bottom: spCalc(45);
+
+    h3{
+        font-size: spFont(28);
+        line-height: 1;
+        width: date(479.64);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: c.$main;
+        border-radius: 30px;
+        border: solid 1.5px #000;
+        text-align: center;
+        color: #fff;
+        padding: date(20) 0;
+        margin-top: date(-45);
+        @include pc{
+            font-size: pcFont(37);
+        }
+    }
+}
+
+.date_ttl{
+    text-align: center;
+    font-size: spFont(30);
+    line-height: 1;
+    padding: date(70) 0 3px;
+    color: c.$main;
+    border-bottom: solid 1px c.$main;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    @include pc{
+        font-size: pcFont(37);
+    }
+}
+
+.date_wrap{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    width: date(483);
+    margin: date(23) auto 0;
+    gap: 18px;
+    justify-content: left;
+    color: c.$main;
+    .place{
+        width: calc(128 / 483) * 100%;
+        border-radius: 30px;
+        border: solid c.$main 1px;
+        text-align: center;
+        line-height: 1;
+        padding: calc(11 / 483) * 100% 0;
+        font-size: spFont(30);
+    }
+    .store_date{
+        font-size: spFont(32);
+        white-space: nowrap;
+        span{
+            font-size: spFont(45);
+        }
+    }
+    @include pc{
+        .place{
+            font-size: pcFont(40);
+        }
+        .store_date{
+            font-size: pcFont(43);
+            span{
+                font-size: pcFont(60);
+            }
+        }
+    }
+}
+
+.schedule_txt1{
+    font-size: spFont(28);
+    width: date(621.6);
+    margin: date(33) auto 0;
+    @include pc{
+        font-size: pcFont(37.33);
+    }
+}
+
+.schedule_txt2{
+    font-size: spFont(30);
+    text-align: center;
+    margin: date(19) auto 0;
+    line-height: 1.8;
+    @include pc{
+        font-size: pcFont(40);
+    }
+}
+
+.mainte_date{
+    text-align: center;
+    color: c.$main;
+    font-size: spFont(32);
+    white-space: nowrap;
+    line-height: 1;
+    margin: date(40) auto 0;
+    span{
+        font-size: spFont(45);
+    }
+    @include pc{
+        font-size: pcFont(43);
+        span{
+            font-size: pcFont(60);
+        }
+    }
+}

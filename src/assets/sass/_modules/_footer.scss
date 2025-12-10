@@ -2,52 +2,103 @@
 @use '../_mixin' as *;
 @use '../_common' as c;
 
-.footer{
+.footer_chara-wrap{
+    width: 100%;
     position: relative;
-    .footer_inner{
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-top: spCalc(87);
-        width: 100%;
-    }
-    .copy{
-        line-height: 0;
-        width: spCalc(163);
-        margin: 0 auto;
-    }
-    .logo{
-        line-height: 0;
-        width: spCalc(188);
-        margin: spCalc(30) auto 0;
-    }
-    .sns{
-        width: spCalc(232);
-        margin: spCalc(30) auto 0;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        li{
-            width: calc(105 / 232) * 100%;
-            font-size: spFont(16.3);
-            line-height: 1;
+    height: auto;
+    padding-top: spCalc(494);
+
+}
+
+.footer_cojicoji{
+    bottom: 0;
+    left: 0;
+    width: spCalc(240.05);
+    margin-left: spCalc(273);
+}
+.footer_jiro{
+    bottom: 0;
+    left: 0;
+    width: spCalc(188.34);
+    margin-left: spCalc(65);
+}
+.footer_usako{
+    bottom: 0;
+    right: 0;
+    width: spCalc(136.67);
+    margin-right: spCalc(76.6);
+}
+.footer_tommy{
+    top: 0;
+    left: 0;
+    width: spCalc(136);
+    margin-left: spCalc(148);
+    margin-top: spCalc(66);
+}
+.footer_teruko{
+    top: 0;
+    right: 0;
+    width: spCalc(140);
+    margin-right: spCalc(114.6);
+}
+
+.footer_logo{
+    width: spCalc(376.57);
+    margin: spCalc(79) auto 0;
+    line-height: 0;
+}
+
+.sns{
+    display: flex;
+    flex-wrap: wrap;
+    width: spCalc(583);
+    justify-content: space-between;
+    margin: spCalc(92) auto 0;
+    li{
+        width: calc(250 / 583) * 100%;
+        a{
             text-align: center;
-            white-space: nowrap;
-            a{
-                color: c.$main;
-            }
-            &:nth-of-type(3),
-            &:nth-of-type(4){
-                margin-top: calc(10 / 232) * 100%
-            }
-            @include pc{
-                font-size: pcFont(18.85);
-            }
+            line-height: 0;
         }
+        div{
+            margin: 0 auto;
+            line-height: 1;
+        }
+    }
+    
+}
+
+.link_shoplist{
+    .link_inner{
+        width: calc(194 / 250) * 100%;
     }
 }
 
-.footer_bg{
-    line-height: 0;
-    width: 100%;
+.link_online{
+    .link_inner{
+        width: 100%;
+    }
+}
+
+.link_staff{
+    margin-top: spCalc(57);
+    .link_inner{
+        width: calc(251 / 250) * 100%;
+    }
+}
+
+.link_insta{
+    margin-top: spCalc(57);
+    .link_inner{
+        width: calc(220 / 250) * 100%;
+    }
+}
+
+.copyright{
+    font-size: spFont(23);
+    text-align: center;
+    padding: spCalc(72) 0 spCalc(89);
+    @include pc{
+        font-size: pcFont(30.67);
+    }
 }

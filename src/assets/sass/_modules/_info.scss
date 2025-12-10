@@ -1,0 +1,75 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.info_wrap{
+    width: spCalc(650);
+    margin: 0 auto spCalc(40);
+    padding: spCalc(69.5) 0 spCalc(60);
+    background: #fff;
+    border-radius: 15px;
+    line-height: 1.7;
+    .info_ttl{
+        width: spCalc(400.76);
+        margin: 0 auto spCalc(40);
+    }
+    .info_img{
+        width: calc(528.01 / 650) * 100%;
+        margin: calc(55.8 / 650) * 100% auto 0;
+        line-height: 0;
+    }
+
+    .cafe{
+        text-align: center;
+        color: c.$main;
+        margin: calc(40 / 650) * 100% auto 0;
+        font-size: spFont(35);
+        line-height: 1.5;
+    }
+    .cafe_txt{
+        width: calc(492.31 / 650) * 100%;
+        margin: calc(28 / 650) * 100% auto 0;
+        font-size: spFont(29);
+        span{
+            font-size: spFont(25);
+
+        }
+    }
+
+    .store_info{
+        display: block;
+        width: fit-content;
+        margin: calc(70 / 650) * 100% auto 0;
+        text-align: center;
+        font-size: spFont(30);
+        border-bottom: solid 1px c.$main;
+        color: c.$main;
+
+    }
+
+    .store_name{
+        margin: calc(35 / 650) * 100% auto 0;
+        text-align: center;
+        color: c.$main;
+        font-size: spFont(29);
+    }
+    @include pc{
+        .cafe{
+            font-size: pcFont(46.67);
+        }
+        .cafe_txt{
+            font-size: pcFont(38.67);
+            span{
+                font-size: pcFont(33.33);
+            }
+        }
+
+        .store_info{
+            font-size: pcFont(40);
+        }
+
+        .store_name{
+            font-size: pcFont(38.67);
+        }        
+    }
+}

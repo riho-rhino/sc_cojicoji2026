@@ -1,0 +1,77 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.top{
+    width: 100%;
+    position: relative;
+    .top_mv{
+        padding: spCalc(52) 0 spCalc(100);
+        width: spCalc(675.69);
+        margin: 0 auto;
+    }
+    .top_cojicoji{
+        bottom: 0;
+        left: 0;
+        width: spCalc(219.01);
+        margin-left: spCalc(19);
+    }   
+    .top_usako{
+        bottom: 0;
+        right: 0;
+        width: spCalc(122.36);
+        margin-right: spCalc(28);
+    }   
+    .top_tommy{
+        top: 0;
+        right: 0;
+        width: spCalc(112.15);
+        margin: 0{
+            top: spCalc(27);
+            right: spCalc(28);
+        };
+    }   
+}
+
+
+.top_logo{
+    width: spCalc(444.29);
+    margin: 0 auto{
+        top: spCalc(6);
+    };
+}
+
+.top_chara{
+    position: relative;
+    margin-top: spCalc(59);
+    width: 100%;
+    height: auto;
+
+    .top_korosuke{
+       bottom: 0;
+       left: 0; 
+       width: spCalc(151.39);
+       margin-left: spCalc(91); 
+    }
+    .top_jiro{
+       margin-left: spCalc(263.94); 
+       width: spCalc(155.08);
+    }
+    .top_teruko{
+       top: 0;
+       right: 0;
+       margin-right: spCalc(77); 
+       margin-top: spCalc(5); 
+       width: spCalc(123);
+    }
+}
+
+.lead{
+    font-size: spFont(27);
+    line-height: calc(52 / 27);
+    text-align: center;
+    margin-top: spCalc(41); 
+    @include pc{
+        font-size: pcFont(36);
+    }
+}

@@ -1,29 +1,35 @@
 <div class="wrapper">
+    <div class="left-wrap">
+        <%- include('./_pc/_left.ejs') %>
+    </div>
     <div class="contents">
         <%- include('./_top/_top.ejs') %>
         <%- include('./_top/_countdown.ejs') %>
-        <%- include('./_top/_info.ejs') %>
-        <%- include('./_top/_spanchor.ejs') %>
+        <%- include('./_top/_schedule.ejs') %>
+        <%- include('./_anchor/_spanchor.ejs') %>
 
         <main class="main">
-            <section id="sec_1">
+            <section class="sec sec_1" id="sec_1">
                 <%- include('./_section/_section1.ejs') %>
             </section>
-            <section id="sec_2">
+            <section class="sec sec_2" id="sec_2">
                 <%- include('./_section/_section2.ejs') %>
             </section>
-            <section id="sec_3">
+            <section class="sec sec_3" id="sec_3">
                 <%- include('./_section/_section3.ejs') %>
             </section>
-            <section id="sec_4">
+            <section class="sec sec_4" id="sec_4">
                 <%- include('./_section/_section4.ejs') %>
             </section>
         </main>
         <%- include('./_contents/_about.ejs') %>
-        <%- include('./_contents/_cafe.ejs') %>
+        <%- include('./_contents/_info.ejs') %>
         <%- include('./_contents/_foot.ejs') %>
     </div>
+    <div class="right-wrap">
+        <%- include('./_pc/_right.ejs') %>
+    </div>
 </div>
-<img src="<%= rootURL %>" alt="">
 
-<script src="<%= rootURL %>assets/js/index.js"></script>
+
+<script src="<%= rootURL %>/assets/js/index.js"></script>

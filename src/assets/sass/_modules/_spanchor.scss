@@ -2,140 +2,76 @@
 @use '../_mixin' as *;
 @use '../_common' as c;
 
-$color:#AF753F;
-
-.sp_anchor-wrap{
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .4s ease;
-    z-index: 900;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 500;
-    &.show{
-        opacity: 1;
-        pointer-events: all;
-    }
-    @include pc{
-        display: none;
-    }
+.lineup{
+    width: spCalc(224.31);
+    line-height: 0;
+    margin: spCalc(95) auto 0;
 }
 
-.sp_anchor{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 800;
-    width: 100%;
-    margin: 0{
-        bottom: spCalc(20);
-        left: spCalc(20)
-    };
-    .sp_anchor_list{
-        display: flex;
-        align-items: center;
-        vertical-align: middle;
-        width: spCalc(200);
-        justify-content: space-between;
+.spanchor_list{
+    width: spCalc(629);
+    margin: spCalc(30) auto 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    li{
+        width: calc(290 / 629) * 100%;
+        height: auto;
+        padding-top: calc(290 / 629) * 100%;
+        background: #fff;
+        position: relative;
+        border-radius: 50%;
+        .anchor_img{
+            display: block;
+            position: absolute;
+            line-height: 0;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
 
-        li{
-            width: calc(60 / 200) * 100%;
-            font-size: spfont(10.4);
+        }
+        .categoly{
+            position: absolute;
+            font-size: spFont(28);
             line-height: 1;
-            text-align: center;
-            a{
-                display: block;
-                width: 100%;
-                border-radius: 30px;
-                background: #fff;
-                border: solid $color 1px;
-                color: $color;
-                transition: all .3s ease;
-                padding: calc(8 / 60) * 100% 0;
-                font-size: spFont(10);
+            white-space: nowrap;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            color: #000;
+            z-index: 10;
+            margin-bottom: -15%;
+            @include pc{
+                font-size: pcFont(37.33);
             }
         }
     }
-   
 }
-.topanchor_cat{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: spCalc(62);
-    padding-top: spCalc(24);
-    line-height: 0;
-    z-index: 500;
-    
-    margin: 0 {
-        bottom: spCalc(9);
-        right: spCalc(14);
-    };
-    .top_arrow{
-        width: calc(27 / 62) * 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        line-height: 0;
-        img{
-            animation: updown 2s linear infinite;
-        }
+
+.anchor_1{
+    span{
+        width: calc(210.62 / 290) * 100%;
     }
 }
 
-@keyframes updown {
-    0%,100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(10px);
+.anchor_2{
+    span{
+        width: calc(175 / 290) * 100%;
     }
 }
 
-
-.wrapper:has(#sec_1.on) .sp_anchor-wrap .sp_anchor ul li:nth-child(1){
-    a{
-        background: $color;
-        color: #fff;
+.anchor_3{
+    margin-top: calc(80 / 629) * 100%;
+    span{
+        width: calc(161 / 290) * 100%;
     }
 }
 
-.wrapper:has(#sec_1.on) .sp_anchor-wrap .sp_anchor ul li:not(:nth-child(1)){
-    a{
-        background: #fff;
-        color: $color;
+.anchor_4{
+    margin-top: calc(80 / 629) * 100%;
+    span{
+        width: calc(244.73 / 290) * 100%;
     }
-}
-
-
-.wrapper:has(#sec_2.on) .sp_anchor-wrap .sp_anchor ul li:nth-child(2){
-    a{
-        background: $color;
-        color: #fff;
-    }
-}
-
-.wrapper:has(#sec_2.on) .sp_anchor-wrap .sp_anchor ul li:not(:nth-child(2)){
-    a{
-        background: #fff;
-        color: $color;
-    }
-    
-}
-
-.wrapper:has(#sec_3.on) .sp_anchor-wrap .sp_anchor .sp_anchor_list li:nth-child(3){
-    a{
-        background: $color;
-        color: #fff;
-    }
-}
-
-.wrapper:has(#sec_3.on) .sp_anchor-wrap .sp_anchor .sp_anchor_list li:not(:nth-child(3)){
-    a{
-        background: #fff;
-        color: $color;
-    }
-    
 }

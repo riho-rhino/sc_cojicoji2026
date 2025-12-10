@@ -1,0 +1,133 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.animation_wrap{
+    position: relative;
+    height: auto;
+}
+
+.animation_1{
+    margin: spCalc(70) 0 spCalc(68);
+    width: 100%;
+    padding-top: spCalc(289);
+    .table{
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: spCalc(199.99);
+        margin-bottom: spCalc(25);
+    }   
+    .teruko{
+        top: 0;
+        right: 0;
+        width: spCalc(101);
+        margin-right: spCalc(219);
+    }
+    .useko{
+        bottom: 0;
+        right: 0;
+        width: spCalc(93.08);
+        margin-right: spCalc(146.5);
+    }
+    .tommy{
+        bottom: 0;
+        left: 0;
+        width: spCalc(107);
+        margin-left: spCalc(137);
+        margin-bottom: spCalc(65);
+    }
+}
+
+.animation_3{
+    margin: spCalc(88) 0 spCalc(39);
+    width: 100%;
+    .bed{
+        line-height: 0;
+        width: spCalc(188.42);
+        margin: 0 auto 0 spCalc(214);
+    }
+    .juro{
+        width: spCalc(138.7);
+        bottom: 0;
+        right: 0;
+        margin: 0{
+            bottom: spCalc(5);
+            right: spCalc(189);
+        };
+    }
+}
+
+.animation_4{
+    margin: spCalc(90) 0 spCalc(28);
+    width: 100%;
+    .pckun{
+        line-height: 0;
+        width: spCalc(187.06);
+        margin: 0 auto 0 spCalc(300);
+        padding: spCalc(28) 0 spCalc(32);
+    }
+    .harehare{
+        width: spCalc(152.15);
+        bottom: 0;
+        left: 0;
+        margin: 0{
+            left: spCalc(132.5);
+        };
+    }
+    .jonny{
+        width: spCalc(111.24);
+        top: 0;
+        right: 0;
+        margin: 0{
+            right: spCalc(122.6);
+        };
+    }
+}
+
+.animation_5{
+    margin: spCalc(81.5) 0 spCalc(13);
+    width: 100%;
+    .mirror{
+        line-height: 0;
+        width: spCalc(184.77);
+        margin: 0 auto 0 spCalc(290.5);
+        padding: 0 0 spCalc(46.5);
+    }
+    .okame{
+        width: spCalc(136.73);
+        bottom: 0;
+        left: 0;
+        margin: 0{
+            left: spCalc(130);
+        };
+    }
+    .pero{
+        width: spCalc(153.2);
+        bottom: 0;
+        right: 0;
+        margin: 0{
+            right: spCalc(99);
+            bottom: spCalc(6);
+        };
+    }
+}
+
+.animation_6{
+    margin: spCalc(6) 0 spCalc(30);
+    width: 100%;
+    .flower{
+        line-height: 0;
+        width: spCalc(117.22);
+        margin: 0 auto 0 spCalc(189);
+        padding: spCalc(187.7) 0 0;
+    }
+    .couple{
+        width: spCalc(246.12);
+        top: 0;
+        left: 0;
+        margin: 0{
+            left: spCalc(337.5);
+        };
+    }
+}

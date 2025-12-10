@@ -5,8 +5,8 @@ $spw : 375;
 $pcw : 1140;
 
 
-$main:#473729;
-$sub:#1F671F;
+$main: #E95464;
+
 
 
 
@@ -14,16 +14,13 @@ body{
     font-family: "Zen Maru Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 0.02em;
+    background: #FFF6C7;
     &.noscroll{
         overflow: hidden;
     }
 }
 
-.inner{
-    position: relative;
-    z-index: 500;
-    overflow: hidden;
-}
 
 .sp{
     display: block;
@@ -64,4 +61,9 @@ a{
   font-family: "Zen Maru Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.chara{
+    position: absolute;
+    line-height: 0;
 }

@@ -1,0 +1,138 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+
+.secttl_wrap{
+    .num{
+        line-height: 0;
+        margin: 0 auto;
+    }
+    .secttl{
+        line-height: 0;
+        margin: spCalc(24) auto 0;
+    }
+}
+.sec_mv{
+    line-height: 0;
+    width: 100%;
+    position: relative;
+    margin: spCalc(65) auto spCalc(59);
+}
+
+.item_wrap{
+    .item_ph{
+        line-height: 0;
+    }
+    .item_info{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        margin-top: 13px;
+        .itemname{
+            font-size: spFont(26);
+        }
+
+        .buy{
+            background: c.$main;
+            border: solid 1.5px #000;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 75.6px;   
+            a{
+                font-size: spFont(26);
+                color: #fff;
+                line-height: 1;
+                padding: calc(18 / 115) * 100% 0 calc(11 / 115) * 100%;
+            }
+        }
+        @include pc{
+            .itemname{
+                font-size:min(pcFont(34.67),17.3px);
+            }
+
+            .buy{
+                a{
+                    font-size:min(pcFont(34.67),17.3px);
+                }
+            }
+            
+        }
+    }
+
+}
+.item_wrap.single{
+    width: spCalc(691.51);
+    margin: 0 auto spCalc(23);
+    .itemname{
+        line-height: 1;
+    }
+    .buy{
+        width: calc(115 / 690) * 100%;
+    }
+}
+
+.item_flex{
+    display: flex;
+    width: spCalc(692);
+    justify-content: space-between;
+    margin: 0 auto spCalc(32);
+    .item_wrap.double{
+        width: calc(335 / 692) * 100%;
+        .itemname{
+            line-height: 1.5;
+        }
+        .buy{
+            width: calc(115 / 335) * 100%;
+        }
+    }
+}
+
+
+.sec_1{
+    .secttl_wrap{
+        .num{
+            width: spCalc(69.67);
+        }
+        .secttl{
+            width: spCalc(337.12);
+        }
+    }
+}
+
+.sec_2{
+    .secttl_wrap{
+        .num{
+            width: spCalc(77.12);
+        }
+        .secttl{
+            width: spCalc(527);
+        }
+    }
+}
+
+
+.sec_3{
+    .secttl_wrap{
+        .num{
+            width: spCalc(76);
+        }
+        .secttl{
+            width: spCalc(659);
+        }
+    }
+}
+
+.sec_4{
+    .secttl_wrap{
+        .num{
+            width: spCalc(78.07);
+        }
+        .secttl{
+            width: spCalc(340);
+        }
+    }
+}
+
