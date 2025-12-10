@@ -1,0 +1,204 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.wrapper{
+    @include pc{
+        display: grid;
+        align-items: start;
+        grid-template-columns: pcCalc(352) pcCalc(435) pcCalc(352);
+        
+        position: relative;
+        z-index: 500;
+    }
+    
+    .left-wrap,.right-wrap{
+        position: sticky;
+        top: 0;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity .5s ease;
+        display: none;
+        z-index: 200;
+        @include pc{
+            display: flex;
+        }
+    }
+    .contents{
+        max-width: 435px;
+        scroll-snap-type: y mandatory; /* または x */
+        @include pc{
+            overflow-y: scroll;
+            position: relative;
+            /* IE, Edge 対応 */
+            -ms-overflow-style: none;
+            /* Firefox 対応 */
+            scrollbar-width: none;
+        }
+    }
+}
+
+.inner{
+    @include pc{
+        border-left: solid #AF753F 0.8px;
+        border-right: solid #AF753F 0.8px;
+    }
+}
+
+.left-inner,.right-inner{
+    opacity: 0;
+    transition: all .5s ease;
+    position: fixed;
+    height: fit-content;
+    width: pcCalc(352);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    &.show{
+        opacity: 1!important;
+    }
+}
+.left_ttl-wrap{
+    opacity: 0;
+    transition: all .5s ease;
+    &.show{
+        opacity: 1!important;
+    }
+}
+
+
+.left-inner{
+    left: 0;
+    text-align: center;
+    
+    h2{
+        // margin-top: calc(147 / 352) * 100%;
+        font-size: pcFont(26.73);
+        line-height: 1;
+    }
+    span{
+        font-size: pcFont(21.38);
+        display: block;
+        line-height: 1;
+        margin-top: calc(7 / 352) * 100%;
+    }
+    .pc_ttl{
+        margin: calc(12 / 352) * 100% auto 0;
+        width: calc(302 / 352) * 100%;
+        line-height: 0;
+    }
+    .cats{
+        margin: calc(42 / 352) * 100% auto 0;
+        width: calc(287.85 / 352) * 100%;
+        line-height: 0;
+        img{
+            animation: 1s steps(1) 0.5s infinite normal both running furufuru;
+        }
+    }
+    .pc_logo{
+        margin: calc(90 / 352) * 100% auto 0;
+        width: calc(155 / 352) * 100%;
+        line-height: 0;
+    }
+    
+}
+
+
+.right-inner{
+    right: 0;
+   .pc_line1{
+    margin: 0 auto;
+    width: calc(339 / 352) * 100%;
+    line-height: 0;
+   }
+   .pc_line2{
+    margin: calc(55 / 352) * 100% auto 0;
+    width: calc(339 / 352) * 100%;
+    line-height: 0;
+   }
+   .pc_index{
+        text-align: center;
+        font-size: pcFont(20.38);
+        border-bottom: dotted 2px c.$main;
+        width: calc(66 / 352) * 100%;
+        margin: calc(56 / 352) * 100% auto 0;
+        line-height: 1;
+   }
+}
+
+
+.pc_anchor{
+    display: flex;
+    align-items: flex-start;
+    vertical-align: top;
+    justify-content: space-between;
+    width: calc(297 / 352) * 100%;
+    margin: 0 auto ;
+    li{
+        width: calc(92 / 297) * 100%;
+        position: relative;
+        line-height: 0;
+        .index_kazari{
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: 0;
+        }
+    }
+    .index_sec{
+        text-align: center;
+        font-size: pcFont(17);
+        color: c.$main;
+        line-height: 1;
+        margin-top: calc(10 / 352) * 100%;
+    }
+
+    .index_1{
+        .index_kazari{
+            width: calc(62.6 / 92) * 100%;
+            margin-top: calc(-10 / 92) * 100%;
+        } 
+    }
+
+    .index_2{
+        margin-top: calc(6 / 92) * 100%;
+        .index_kazari{
+            width: calc(50.11 / 92) * 100%;
+            margin-top: calc(-8 / 92) * 100%;
+        } 
+    }
+
+    .index_3{
+        .index_kazari{
+            width: calc(95.17 / 92) * 100%;
+            margin-top: calc(-6 / 92) * 100%;
+            margin-right: calc(-6 / 92) * 100%;
+        } 
+    }
+}
+
+.pc_sns{
+   width: calc(232 / 352) * 100%; 
+   margin: calc(46.5 / 352) * 100% auto 0;
+   .pc_sns-list{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+    line-height: 1;
+    text-align: center;
+    flex-wrap: wrap;
+    li{
+        width: calc(105 / 232) * 100%;
+        &:nth-of-type(3),
+        &:nth-of-type(4){
+            padding-top: calc(13 / 232) * 100%;
+        }
+        a{
+            color: c.$main;
+        }
+    }
+   }
+}

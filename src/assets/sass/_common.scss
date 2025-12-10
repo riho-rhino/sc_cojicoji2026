@@ -1,0 +1,67 @@
+@use './_reset';
+@use './_mixin' as *;
+
+$spw : 375;
+$pcw : 1140;
+
+
+$main:#473729;
+$sub:#1F671F;
+
+
+
+body{
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    &.noscroll{
+        overflow: hidden;
+    }
+}
+
+.inner{
+    position: relative;
+    z-index: 500;
+    overflow: hidden;
+}
+
+.sp{
+    display: block;
+    @include pc{
+        display: none;
+    }
+}
+.pc{
+    display: none;
+    @include pc{
+        display: block;
+    }
+}
+
+
+a{
+    cursor: pointer;
+}
+
+
+  .fadein{
+    opacity: 0;
+    transition: all .3s linear;
+    &.in{
+        opacity: 1;
+    }
+  }
+
+
+
+.en {
+  font-family: "Bowlby One SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ja {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

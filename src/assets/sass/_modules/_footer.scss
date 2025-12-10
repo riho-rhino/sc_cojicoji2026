@@ -1,0 +1,53 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.footer{
+    position: relative;
+    .footer_inner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: spCalc(87);
+        width: 100%;
+    }
+    .copy{
+        line-height: 0;
+        width: spCalc(163);
+        margin: 0 auto;
+    }
+    .logo{
+        line-height: 0;
+        width: spCalc(188);
+        margin: spCalc(30) auto 0;
+    }
+    .sns{
+        width: spCalc(232);
+        margin: spCalc(30) auto 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            width: calc(105 / 232) * 100%;
+            font-size: spFont(16.3);
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            a{
+                color: c.$main;
+            }
+            &:nth-of-type(3),
+            &:nth-of-type(4){
+                margin-top: calc(10 / 232) * 100%
+            }
+            @include pc{
+                font-size: pcFont(18.85);
+            }
+        }
+    }
+}
+
+.footer_bg{
+    line-height: 0;
+    width: 100%;
+}
