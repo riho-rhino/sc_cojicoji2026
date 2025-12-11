@@ -13,47 +13,42 @@
         height: 100%;
         background: #ffffff8b;
         opacity: 0;
-        transition: all .3s ease;
+        transition: all .5s ease;
         pointer-events: none;
         &.show{
+            pointer-events: visible;
             opacity: 1;
         }
     }
 }
 
-.modal_wrap{
+
+.modal{
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 200;
-    width: 100%;
-    height: 100vh;
-    .modal{
-        border-radius: 15px;
-        background: #fff;
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.26);
-       width: spCalc(630); 
-       position: absolute;
-       top: 50%;
-       left: 50%;
-       transform: translate(-50%,-50%);
-       padding: spCalc(70) 0 spCalc(67);
-       pointer-events: none;
-        opacity: 0;
-        transition: all .3s ease;
-        
-        &.show{
-            opacity: 1;
-            pointer-events: all;
-            z-index: 1000;
-        }
-       .modal_img{
-        width: calc(504.06 / 630) * 100%;
-        margin: 0 auto;
-        line-height: 0;
-       }
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.26);
+    width: spCalc(630); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: spCalc(70) 0 spCalc(67);
+    pointer-events: none;
+    opacity: 0;
+    transition: all .5s ease;
+    
+    &.show{
+        opacity: 1;
+        pointer-events: all;
+        z-index: 1000;
+    }
+    .modal_img{
+    width: calc(504.06 / 630) * 100%;
+    margin: 0 auto;
+    line-height: 0;
     }
 }
+
 
 .modal_itemlist{
     width: calc(500 / 630) * 100%;

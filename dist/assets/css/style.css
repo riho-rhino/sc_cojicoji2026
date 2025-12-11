@@ -301,6 +301,10 @@ body.noscroll {
   overflow: hidden;
 }
 
+.contents {
+  overflow: hidden;
+}
+
 .sp {
   display: block;
 }
@@ -485,7 +489,7 @@ a {
   border: solid #E95464 1px;
   text-align: center;
   line-height: 1;
-  padding: 2.2774327122% 0;
+  padding: 1.6563146998% 0 2.2774327122%;
   font-size: 4vw;
 }
 .date_wrap .store_date {
@@ -1199,6 +1203,48 @@ a {
   width: 20.3073825503%;
 }
 
+.fixed_anchor-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 30px;
+  transform: translateX(-150%);
+  transition: all 0.3s linear;
+}
+.fixed_anchor-wrap.show {
+  transform: translateX(0);
+}
+.fixed_anchor-wrap .fixed_anchor li {
+  width: 34.5px;
+  height: 100px;
+  box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border-radius: 0 20px 20px 0;
+  margin-top: -1px;
+}
+.fixed_anchor-wrap .fixed_anchor li a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.fixed_anchor-wrap .fixed_anchor li a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 3.2vw;
+}
+.fixed_anchor-wrap .fixed_anchor .anchor_kichen p, .fixed_anchor-wrap .fixed_anchor .anchor_fashion p {
+  line-height: 1;
+}
+.fixed_anchor-wrap .fixed_anchor .anchor_homegoods p, .fixed_anchor-wrap .fixed_anchor .anchor_general p {
+  line-height: 1.1;
+}
+
 .secttl_wrap .num {
   line-height: 0;
   margin: 0 auto;
@@ -1371,41 +1417,34 @@ a {
   height: 100%;
   background: rgba(255, 255, 255, 0.5450980392);
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   pointer-events: none;
 }
 .wrapper .modal_bg.show {
+  pointer-events: visible;
   opacity: 1;
 }
 
-.modal_wrap {
+.modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 200;
-  width: 100%;
-  height: 100vh;
-}
-.modal_wrap .modal {
   border-radius: 15px;
   background: #fff;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.26);
   width: 84%;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 9.3333333333% 0 8.9333333333%;
   pointer-events: none;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
-.modal_wrap .modal.show {
+.modal.show {
   opacity: 1;
   pointer-events: all;
   z-index: 1000;
 }
-.modal_wrap .modal .modal_img {
+.modal .modal_img {
   width: 80.0095238095%;
   margin: 0 auto;
   line-height: 0;

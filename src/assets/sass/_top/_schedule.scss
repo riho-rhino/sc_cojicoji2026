@@ -64,7 +64,7 @@ $date: 680;
         border: solid c.$main 1px;
         text-align: center;
         line-height: 1;
-        padding: calc(11 / 483) * 100% 0;
+        padding: calc(8 / 483) * 100% 0 calc(11 / 483) * 100%;
         font-size: spFont(30);
     }
     .store_date{
