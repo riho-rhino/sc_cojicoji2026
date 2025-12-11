@@ -76,12 +76,12 @@ $date: 680;
     }
     @include pc{
         .place{
-            font-size: pcFont(40);
+            font-size: min(pcFont(40),20px);
         }
         .store_date{
-            font-size: pcFont(43);
+            font-size: min(pcFont(43),21.5px);
             span{
-                font-size: pcFont(60);
+                font-size: min(pcFont(60),30px);
             }
         }
     }
@@ -92,7 +92,7 @@ $date: 680;
     width: date(621.6);
     margin: date(33) auto 0;
     @include pc{
-        font-size: pcFont(37.33);
+        font-size: min(pcFont(37.33),18.7px);
     }
 }
 
@@ -102,7 +102,7 @@ $date: 680;
     margin: date(19) auto 0;
     line-height: 1.8;
     @include pc{
-        font-size: pcFont(40);
+        font-size: min(pcFont(40),20px);
     }
 }
 
@@ -117,9 +117,9 @@ $date: 680;
         font-size: spFont(45);
     }
     @include pc{
-        font-size: pcFont(43);
+        font-size: min(pcFont(43),21.5px);
         span{
-            font-size: pcFont(60);
+            font-size: min(pcFont(60),30px);
         }
     }
 }

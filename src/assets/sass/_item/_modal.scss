@@ -1,0 +1,107 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+.wrapper{
+    position: relative;
+    .modal_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background: #ffffff8b;
+        opacity: 0;
+        transition: all .3s ease;
+        pointer-events: none;
+        &.show{
+            opacity: 1;
+        }
+    }
+}
+
+.modal_wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    .modal{
+        border-radius: 15px;
+        background: #fff;
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.26);
+       width: spCalc(630); 
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%,-50%);
+       padding: spCalc(70) 0 spCalc(67);
+       pointer-events: none;
+        opacity: 0;
+        transition: all .3s ease;
+        
+        &.show{
+            opacity: 1;
+            pointer-events: all;
+            z-index: 1000;
+        }
+       .modal_img{
+        width: calc(504.06 / 630) * 100%;
+        margin: 0 auto;
+        line-height: 0;
+       }
+    }
+}
+
+.modal_itemlist{
+    width: calc(500 / 630) * 100%;
+    margin: 0 auto;
+    li{
+        margin-top: calc(40 / 500) * 100%;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        justify-content: space-between;
+        &:nth-of-type(1){
+            margin-top: calc(53 / 500) * 100%;
+        }
+        p{
+            line-height: 1;
+            font-size: spFont(26);
+        }
+    }
+}
+
+.modal_buy{
+    width: calc(115 / 500) * 100%;
+    background: c.$main;
+    border: solid 1px #000;
+    border-radius: 15px;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    a{
+        font-size: spFont(26);
+        width: 100%;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        display: block;
+        padding: calc(8 / 115) * 100% 0 calc(10 / 115) * 100%;
+    }
+}
+
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(60 / 630) * 100%;
+    line-height: 0;
+    margin: 0{
+        top:calc(-10 / 630) * 100%;
+        right:calc(-10 / 630) * 100%;
+    };
+}

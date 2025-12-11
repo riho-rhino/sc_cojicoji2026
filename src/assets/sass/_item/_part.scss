@@ -18,11 +18,24 @@
     width: 100%;
     position: relative;
     margin: spCalc(65) auto spCalc(59);
+    position: relative;
+    .button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: spCalc(45);
+        line-height: 0;
+        margin: 0{
+            bottom: spCalc(73);
+            right: spCalc(54);
+        };
+    }
 }
 
 .item_wrap{
     .item_ph{
         line-height: 0;
+        position: relative;
     }
     .item_info{
         display: flex;
@@ -31,6 +44,12 @@
         align-items: center;
         vertical-align: middle;
         margin-top: 13px;
+        .secret_name{
+            font-size: spFont(26);
+            color: c.$main;
+            text-align: center;
+            width: 100%;
+        }
         .itemname{
             font-size: spFont(26);
         }
@@ -49,7 +68,7 @@
             }
         }
         @include pc{
-            .itemname{
+            .itemname,.secret_name{
                 font-size:min(pcFont(34.67),17.3px);
             }
 
@@ -63,9 +82,37 @@
     }
 
 }
+.question{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.release{
+    font-size: spFont(30);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);    
+    color: c.$main;
+    line-height: 1;
+    white-space: nowrap;
+    @include pc{
+        font-size:min(pcFont(40),20px);
+    }
+}
+
 .item_wrap.single{
     width: spCalc(691.51);
     margin: 0 auto spCalc(23);
+    .item_ph{
+        .question{
+            width: calc(128.84 / 691.51) * 100%;
+        }
+        .release{
+            margin-top: calc(73 / 691.51) * 100%;
+        }
+    }
     .itemname{
         line-height: 1;
     }
@@ -81,6 +128,14 @@
     margin: 0 auto spCalc(32);
     .item_wrap.double{
         width: calc(335 / 692) * 100%;
+        .item_ph{
+            .question{
+                width: calc(77.46 / 335) * 100%;
+            }
+            .release{
+                margin-top: calc(40 / 335) * 100%;
+            }
+        }
         .itemname{
             line-height: 1.5;
         }
@@ -135,4 +190,5 @@
         }
     }
 }
+
 

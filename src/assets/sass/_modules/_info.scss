@@ -55,21 +55,21 @@
     }
     @include pc{
         .cafe{
-            font-size: pcFont(46.67);
+            font-size: min(pcFont(46.67),23.3px);
         }
         .cafe_txt{
-            font-size: pcFont(38.67);
+            font-size: min(pcFont(38.67),19.3px);
             span{
-                font-size: pcFont(33.33);
+                font-size: min(pcFont(33.33),16.5px);
             }
         }
 
         .store_info{
-            font-size: pcFont(40);
+            font-size: min(pcFont(40),20px);
         }
 
         .store_name{
-            font-size: pcFont(38.67);
+            font-size: min(pcFont(38.67),19.3px);
         }        
     }
 }

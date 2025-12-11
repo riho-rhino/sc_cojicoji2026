@@ -55,11 +55,11 @@
     }
     @include pc{
         .about_cojicoji{
-            font-size: pcFont(40);
+            font-size: min(pcFont(40),20px);
         }
 
         .about_txt{
-            font-size: pcFont(38.67);
+            font-size: min(pcFont(38.67),19.3px);
         }
     }
 }

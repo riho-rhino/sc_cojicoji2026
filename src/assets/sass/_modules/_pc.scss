@@ -26,7 +26,8 @@
         }
     }
     .contents{
-        // max-width: 500px;
+        max-width: 500px;
+        margin: 0 auto;
         scroll-snap-type: y mandatory; /* または x */
         @include pc{
             overflow-y: scroll;

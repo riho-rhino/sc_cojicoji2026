@@ -44,7 +44,7 @@
             z-index: 10;
             margin-bottom: -15%;
             @include pc{
-                font-size: pcFont(37.33);
+                font-size: min(pcFont(37.33),18.7px);
             }
         }
     }

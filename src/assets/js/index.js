@@ -1,3 +1,3 @@
-import hellow from "./_modules/_test"
+import $ from "jquery"
 
-hellow()
+$()
