@@ -20,7 +20,7 @@
         align-items: center;
         transition: opacity .5s ease;
         display: none;
-        z-index: 200;
+        z-index: 100;
         @include pc{
             display: flex;
         }
@@ -78,9 +78,10 @@
     .pc_logo{
         position: absolute;
         width: calc(474.83 / 866) * 100%;
-        top: 50%;
+        bottom: 0;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translateX(-50%);
+        margin-bottom:  calc(832 / 866) * 100%;
     }
     
 }

@@ -99,6 +99,6 @@
     text-align: center;
     padding: spCalc(72) 0 spCalc(89);
     @include pc{
-        font-size: pcFont(30.67);
+        font-size: min(pcFont(30.67),15.3px);
     }
 }

@@ -15,11 +15,28 @@ body{
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.02em;
-    background: #FFF6C7;
+    
     &.noscroll{
         overflow: hidden;
     }
 }
+
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    // background: linear-gradient(
+    //     to bottom,
+    //     #FFE0E0 0%,
+    //     #FFF2F2 50%,
+    //     #FFE0E0 100%
+    // );
+}
+
 
 .contents{
     overflow: hidden;
@@ -69,4 +86,30 @@ a{
 .chara{
     position: absolute;
     line-height: 0;
+}
+
+.line{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+
+@keyframes aruku {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+    
+}
+@keyframes fuwafuwa_1 {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(10%);
+    }
 }

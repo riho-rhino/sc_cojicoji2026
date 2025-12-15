@@ -1,0 +1,110 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+
+.countdown{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: spCalc(280);
+    padding-top: spCalc(280);
+    border-radius: 50%;
+    height: 0;
+    background: #FFFB95;
+    border: solid #000 1px;
+    z-index: 50;
+    margin: 0 10px 10px 0;
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.15);
+    transition: all .7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translateY(0) rotate(0);
+    
+    &.hidden{
+        transform: translateY(150%) rotate(45deg);
+    }
+    .countdown_inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        line-height: 1;
+        white-space: nowrap;
+        .countdown_txt{
+            font-size: spFont(22);
+            span{
+                font-size: spFont(30);
+            }
+        }
+        
+    }
+    .geran{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(146.61 / 280) * 100%;
+        margin-top: calc(-74.94 / 280) * 100%;
+    }
+    @include pc{
+        right: inherit;
+        left: 50%;
+        margin: 0;
+        transform: translateX(-50%);
+        width: calc(373.33px / 2);
+        margin-bottom: calc(408 / 866) * 100%;
+        width: calc(560 / 866) * 100%;
+        padding-top: calc(220 / 866) * 100%;
+        border-radius: 60px;
+        .countdown_inner{
+            .countdown_txt{
+                font-size: min(pcFont(29),14.5px);
+                span{
+                    font-size: min(pcFont(40),20px);
+                }
+            }
+        }
+        .geran{
+            width: calc(162.4 / 560) * 100%;
+            margin-top: calc(-113 / 560) * 100%;
+        }
+    }
+}
+
+.countdown_date{
+    display: flex;
+    text-align: end;
+    vertical-align: bottom;
+    justify-content: center;
+    align-items: flex-end;
+    line-height: 1;
+    margin-top: calc(17 / 280) * 100%;
+    
+    .ato{
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        font-size: spFont(35);
+        
+    }
+    .countdown_num{
+        -webkit-text-stroke-width: 2px;
+         color: c.$main;
+         font-size: spFont(105);
+         margin-bottom: -5px;
+    }
+    .nichi{
+        font-size: spFont(35);
+    }
+    @include pc{
+        .ato{
+            font-size: min(pcFont(35),17.5px);
+            -ms-writing-mode: unset;
+            writing-mode: unset;
+        }
+        .countdown_num{
+            font-size: min(pcFont(105),52.5px);
+        }
+        .nichi{
+            font-size: min(pcFont(35),17.5px);
+        }
+    }
+}

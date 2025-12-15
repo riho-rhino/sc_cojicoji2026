@@ -6,8 +6,8 @@
     width: 100%;
     position: relative;
     .top_mv{
-        padding: spCalc(52) 0 spCalc(100);
-        width: spCalc(675.69);
+        padding: 0 0 spCalc(100);
+        width: 100%;
         margin: 0 auto;
     }
     .top_cojicoji{
@@ -15,22 +15,21 @@
         left: 0;
         width: spCalc(219.01);
         margin-left: spCalc(19);
+        img{
+            animation: aruku 2s linear infinite;
+            transform-origin: bottom center;
+        }
     }   
     .top_usako{
         bottom: 0;
         right: 0;
         width: spCalc(122.36);
         margin-right: spCalc(28);
-    }   
-    .top_tommy{
-        top: 0;
-        right: 0;
-        width: spCalc(112.15);
-        margin: 0{
-            top: spCalc(27);
-            right: spCalc(28);
-        };
-    }   
+        img{
+            animation: fuwafuwa_1 1.5s ease infinite alternate-reverse;
+            transform-origin: bottom center;
+        }
+    }    
 }
 
 
@@ -75,3 +74,5 @@
         font-size: pcFont(36);
     }
 }
+
+

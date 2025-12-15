@@ -4,13 +4,26 @@
 
 
 .secttl_wrap{
+    color: c.$main;
+    text-align: center;
     .num{
-        line-height: 0;
+        line-height: 1;
         margin: 0 auto;
+        font-size: spFont(50);
     }
     .secttl{
-        line-height: 0;
+        line-height: 1;
         margin: spCalc(24) auto 0;
+        font-size: spFont(62);
+        letter-spacing: 0.1em;
+    }
+    @include pc{
+        .num{
+            font-size: min(pcFont(66.67),33.3px);
+        }
+        .secttl{
+            font-size: min(pcFont(82.67),41.3px);
+        }        
     }
 }
 .sec_mv{
@@ -144,51 +157,4 @@
         }
     }
 }
-
-
-.sec_1{
-    .secttl_wrap{
-        .num{
-            width: spCalc(69.67);
-        }
-        .secttl{
-            width: spCalc(337.12);
-        }
-    }
-}
-
-.sec_2{
-    .secttl_wrap{
-        .num{
-            width: spCalc(77.12);
-        }
-        .secttl{
-            width: spCalc(527);
-        }
-    }
-}
-
-
-.sec_3{
-    .secttl_wrap{
-        .num{
-            width: spCalc(76);
-        }
-        .secttl{
-            width: spCalc(659);
-        }
-    }
-}
-
-.sec_4{
-    .secttl_wrap{
-        .num{
-            width: spCalc(78.07);
-        }
-        .secttl{
-            width: spCalc(340);
-        }
-    }
-}
-
 

@@ -1,0 +1,101 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+
+.topanchor{
+    position: fixed;
+    width: spCalc(200);
+    height: 0;
+    padding-top: spCalc(200);
+    border-radius: 50%;
+    background: #FFD7D7;
+    border: solid 1px #000;
+    z-index: 200;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    transition: all .7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform: translateY(150%) rotate(45deg);
+    @include pc{
+        display: none;
+    }
+    &.show{
+        transform: translateY(0) rotate(0);
+    }
+    &.change{
+        .topanchor_chara{
+            .topanchor_1{
+                opacity: 0;
+            }
+            .topanchor_2{
+                opacity: 1;
+            }
+        }
+    }
+    .topanchor_inner{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    .topanchor_chara{
+        width: 100%;
+        position: relative;
+        .topanchor_1{
+            position: relative;
+            width: calc(84.7 / 200) * 100%;
+            margin: 0 auto;
+            line-height: 0;
+            z-index: 1;
+            opacity: 1;
+            transition: all .5s ease;
+        }
+        .topanchor_2{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(84.7 / 200) * 100%;
+            line-height: 0;
+            z-index: 5;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+    }
+    .topanchor_arrow{
+        width: 11px;
+        line-height: 0;
+        margin: 2px auto;
+        position: relative;
+        z-index: 15;
+    }
+    p{
+       position: relative;
+       font-size: spFont(20.8); 
+       line-height: 1;
+       z-index: 15;
+       text-align: center;
+    }
+    @include pc{
+        width: 133px;
+        height: 133px;
+        padding: 0;
+        .topanchor_chara{
+            .topanchor_1{
+                width: calc(112.93 / 266.67) * 100%;
+            }
+            .topanchor_2{
+                width: calc(112.93 / 266.67) * 100%;
+            }
+        }
+        .topanchor_arrow{
+            width: 13px;
+        }
+        p{
+        font-size: min(pcFont(27.73),13.8px); 
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@use '../_reset';
+@use '../_mixin' as *;
+@use '../_common' as c;
+
+
+.fixed_anchor-wrap{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+    transform: translateX(-150%);
+    transition: all .3s linear;
+    &.show{
+        transform: translateX(0);
+    }
+    &.visible{
+        .fixed_anchor{
+            transform: translateX(0);
+        }
+    }
+    .fixed_anchor{
+        transform: translateX(-150%);
+        transition: all .3s linear;
+        li{
+            width: 34.5px;
+            height: 100px;
+            box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.15);
+            background: #fff;
+            border-radius: 0 20px 20px 0;
+            margin-top: -1px;
+            a{
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                p{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #000;
+                    writing-mode: vertical-rl;
+                    text-align: center;
+                    font-size: spFont(24);
+                }
+            }
+        }
+        .anchor_kichen,.anchor_fashion{
+            p{
+                line-height: 1;
+            }
+        }
+        .anchor_homegoods,.anchor_general{
+            p{
+                line-height: 1.1;
+            }
+        }
+    }
+}
